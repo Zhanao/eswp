@@ -27,7 +27,7 @@ p.myClass {
 }
 
 #blockId {
-    border: 3px solid #ff8000;
+    border: 3px solid #ff8000; <!--bordo di spessore 3 di un colore arancione -->
     background-color: #ffff80;
 }
 

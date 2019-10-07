@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+body {
+  background-image: url("https://www.studiaremedicinaestero.com/assets/components/phpthumbof/cache/L1.20a7d338d4b1939bcd54b9f02cc86be7.jpg");
+}
+
+h1, h2, h3 {
+    color: white;
+}
+p {
+    color: white;
+}
+div {
+	
+	color:white;
+}
+legend {
+	color: white;
+}
+radio {
+	color: red;
+}
+
