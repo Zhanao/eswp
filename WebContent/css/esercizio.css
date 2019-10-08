@@ -2,6 +2,7 @@
 
 body {
   background-image: url("https://www.studiaremedicinaestero.com/assets/components/phpthumbof/cache/L1.20a7d338d4b1939bcd54b9f02cc86be7.jpg");
+	filter: grayscale(100%);
 }
 
 h1, h2, h3 {

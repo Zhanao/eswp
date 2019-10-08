@@ -42,4 +42,19 @@ $(function() {
 			cur.addClass('red');
 		}
 	});
+	
+	$('#ascia').click(function() {
+		let msg = $('#msg4');
+		msg.html('usa ascia');
+	});
+	$('#spada').click(function() {
+		let msg = $('#msg4');
+		msg.html('usa spada');
+	});
+	$('#martello').click(function() {
+		let msg = $('#msg4');
+		msg.html('usa martello');
+	});
+	
+	
 });

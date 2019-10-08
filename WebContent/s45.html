@@ -5,23 +5,23 @@
 <title>Slide 45</title>
 </head>
 <body>
-    <h1>Asynchronous JavaScript And XML</h1>
+    <h1>Asynchronous JavaScript And XML</h1><!-- il meccanismo standard mi spinge a creare una nuova pagina ogni volta che ho una response, con questo metodo rimango semrpe sulla stessa pagina-->
     <p>
         Back to <a href="./index.html">home</a>
     </p>
 
     <textarea id="target" rows="20" cols="80"></textarea>
     <div>
-        <button onclick="getText();">Get text</button>
+        <button onclick="getText();">Get text</button> <!-- quando clicco il bottone, mi fa eseguire la funzione in java script chimato getText() -->
         <button onclick="getTextDetailed();">Get text w/ details</button>
     </div>
 
     <script type="text/javascript">
-        function callback() {
+        function callback() {<!-- funzione che verrà chiamato dal browser una volta che riceve la risposta dal server -->
             let target = document.getElementById('target');
 
         	try {
-                switch (this.readyState) {
+                switch (this.readyState) {<!-- this si riferisce a XHR-->
                 case XMLHttpRequest.OPENED:
                     target.value += "[Server connection established]\n";
                     return;
@@ -61,8 +61,8 @@
 
         function getText() {
             let request = new XMLHttpRequest();
-            request.onload = callback;
-            request.open("GET", "/eswp/s45.txt");
+            request.onload = callback; <!-- notare che non ho messo callback() perche non la voglio chiamare solo tenerla a mente per ora (la sto trattando come variabile, su Java posso solo chiamarle), ci pensera qualcun altro a chiamarlo-->
+            request.open("GET", "/eswp/s45.txt"); <!--ci pensa jetty -->>
             request.send();
         }
     </script>

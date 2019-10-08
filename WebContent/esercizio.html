@@ -5,8 +5,9 @@
 <title>Esercizio</title>
 <link rel="stylesheet" type="text/css" href="./css/esercizio.css" />
 </head>
-</head>
+<p class="bg"></p>
 <body>
+ 
 	<h1>Relazione tra Enegia e Massa</h1>
 	<hr />
 	<h2>
@@ -89,6 +90,61 @@
 
 
 	</form>
+	
+	 <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <button onclick="tre();">3</button> <!-- quando clicco il bottone, mi fa eseguire la funzione in java script chimato getText() -->
+        <button onclick="cinque();">5</button>
+    </div>
+	 <script type="text/javascript">
+        function callback() {
+        	
+            let target = document.getElementById('target');
+        	try {
+                switch (this.readyState) {<!-- this si riferisce a XHR-->
+                case XMLHttpRequest.OPENED:
+                    target.value += "[Server connection established]\n";
+                    return;
+                case XMLHttpRequest.HEADERS_RECEIVED:
+                    target.value += "[Request received]\n";
+                    return;
+                case XMLHttpRequest.LOADING:
+                    target.value += "[Processing request]\n";
+                    return;
+                case XMLHttpRequest.DONE:
+                    target.value += "[Response is ready]\n";
+                    break;
+                default:
+                    // UNSENT
+                    target.value += "[Request not initialized or error " + this.readyState + "]\n";
+                    return;
+                }
+            } catch (e) {
+                target.value += "[Exception: " + e + "]\n";
+	            return;
+            }
+
+            if (this.status != 200) {
+                target.value += "[Something went wrong: " + this.status + "]\n";
+                return;
+            }
+            target.value += this.responseText;
+        }
+
+        function tre() {
+            let request = new XMLHttpRequest();
+            rrequest.onreadystatechange = callback;
+            request.open("GET", "/eswp/3.png");
+            request.send();
+        }
+
+        function cinque() {
+            let request = new XMLHttpRequest();
+            request.onreadystatechange = callback;
+            request.open("GET", "/eswp/5.png"); 
+            request.send();
+        }
+    </script>
 
 </body>
 </html>
