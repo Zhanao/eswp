@@ -4,8 +4,25 @@
 <head>
 <meta charset="utf-8">
 <title>Hello</title>
+<link rel="stylesheet" type="text/css" href="./css/hello.css" />
 </head>
 <body>
-    <p>Hello world!</p>
+    	<form action="/comment" method="post">
+		<div style="position: absolute; left: 0; top: 0;">
+			<input type="text" /> <label class="right">label</label>
+		</div>
+		<br>
+		<div style="position: absolute; left: 100px; top: 50px;">
+			<input type="text" /> <label class="left">label</label>
+		</div>
+		<br>
+<!-- 		<div style="position: absolute; left: 0; top: 100px;"> -->
+<!-- 			<input type="text" /> <label class="top">label</label> -->
+<!-- 		</div> -->
+		<br>
+		<div style="position: absolute; left: 0; top: 150px;">
+			<input type="text" /> <label class="bottom">label</label>
+		</div>
+	</form>
 </body>
 </html>
